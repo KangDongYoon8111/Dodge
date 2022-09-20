@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
         // 게임 오브젝트에서 Rigidbody 컴포넌트를 찾아서
         // playerRigidbody(변수)에 할당
         playerRigidbody = GetComponent<Rigidbody>();
-
     }
 
     void Update()
