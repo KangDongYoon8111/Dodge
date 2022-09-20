@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
 
             // 상대방으로부터 PlayerController 컴포넌트를 가져오는 데
             // 성공했다면
-            if(playerController != null)
+            if (playerController != null)
             {
                 // 상대방 PlayerController 컴포넌트의 Die() 메서드 실행
                 playerController.Die();
