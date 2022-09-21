@@ -31,16 +31,16 @@ public class BulletSpawner : MonoBehaviour
         timeAfterSpawn += Time.deltaTime;
 
         // 최근 생성 시점에서부터 누적된 시간이 생성 주기보다 크거나 같다면
-        if(timeAfterSpawn >= spawnRate)
+        if (timeAfterSpawn >= spawnRate)
         {
             // 누적된 시간을 리셋
             timeAfterSpawn = 0f;
 
             // bulletPrefab의 복제본을 transform.position 위치와
             // transform.rotation 회전으로 생성
-            GameObject bullet = Instantiate(bulletPrefab, 
+            GameObject bullet = Instantiate(bulletPrefab,
                 transform.position, transform.rotation);
-            
+
             // 생성된 bullet 게임 오브젝트의 정면 방향이
             // target을 향하도록 회전
             bullet.transform.LookAt(target);
