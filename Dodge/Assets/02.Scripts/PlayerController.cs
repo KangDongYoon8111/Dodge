@@ -56,9 +56,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Link")
+        //if(other.tag == "Link")
+        //{
+        //    transform.position = linkOut.position;
+        //}
+
+        switch (other.tag)
         {
-            transform.position = linkOut.position;
+            case "Link":
+                transform.position = linkOut.position;
+                break;
+            case "Change":
+                gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+                break;
+            default:
+                break;
         }
     }
 }
